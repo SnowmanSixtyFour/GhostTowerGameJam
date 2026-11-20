@@ -30,6 +30,13 @@ window/size/viewport_height=480
 window/stretch/mode="canvas_items"
 window/per_pixel_transparency/allowed=true
 
+[gui]
+
+fonts/dynamic_fonts/use_oversampling=false
+theme/default_font_antialiasing=0
+theme/default_font_subpixel_positioning=0
+theme/custom_font="uid://puphyspw5b2v"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
@@ -40,3 +47,5 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/decals/filter=0
+textures/light_projectors/filter=0

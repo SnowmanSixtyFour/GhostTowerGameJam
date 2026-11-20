@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://puphyspw5b2v"
+path="res://.godot/imported/pixelated.fnt-b19d1f0d02e371b49f7f7c6760897972.fontdata"
+
+[deps]
+
+source_file="res://Assets/Fonts/pixelated.fnt"
+dest_files=["res://.godot/imported/pixelated.fnt-b19d1f0d02e371b49f7f7c6760897972.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

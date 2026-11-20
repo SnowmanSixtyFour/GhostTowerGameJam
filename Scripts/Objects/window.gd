@@ -1,7 +1,7 @@
 extends Window
 
 var screen_bottom = 5
-var screen_top = 30
+var screen_top = 25
 
 func _process(delta: float):
 	var parent_window = get_parent()

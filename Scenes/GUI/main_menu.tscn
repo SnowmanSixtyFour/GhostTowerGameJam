@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://cpw7oeww5pvjn" path="res://Assets/Images/GUI/window.png" id="4_s14jb"]
 [ext_resource type="Texture2D" uid="uid://clwi3e2w0jx7f" path="res://Assets/Images/GUI/window_unfocused.png" id="5_nmf5u"]
 [ext_resource type="Script" uid="uid://ckrn8quppytc3" path="res://Scripts/Objects/window.gd" id="6_twpvi"]
+[ext_resource type="Texture2D" uid="uid://bw6gpspv6pt15" path="res://Assets/Images/GUI/button.png" id="7_1phqa"]
+[ext_resource type="Texture2D" uid="uid://dn0tv7lysy7nh" path="res://Assets/Images/GUI/button_pressed.png" id="8_s14jb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_61ot5"]
 texture = ExtResource("4_s14jb")
@@ -32,6 +34,20 @@ expand_margin_bottom = 5.0
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12j5o"]
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_twpvi"]
+texture = ExtResource("7_1phqa")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nmf5u"]
+texture = ExtResource("8_s14jb")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
 [node name="MainMenu" type="Control" unique_id=1968912720]
 layout_mode = 3
 anchors_preset = 15
@@ -56,7 +72,7 @@ oversampling_override = 1.0
 position = Vector2i(216, 270)
 size = Vector2i(207, 132)
 min_size = Vector2i(54, 124)
-max_size = Vector2i(590, 390)
+max_size = Vector2i(632, 452)
 theme_override_constants/title_height = 22
 theme_override_constants/resize_margin = 12
 theme_override_icons/close = ExtResource("2_twpvi")
@@ -89,23 +105,53 @@ alignment = 1
 
 [node name="Start" type="Button" parent="OptionsWindow/Panel/VBoxContainer" unique_id=157130889]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_twpvi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nmf5u")
+theme_override_styles/hover = SubResource("StyleBoxTexture_twpvi")
 text = "Start"
 
 [node name="Credits" type="Button" parent="OptionsWindow/Panel/VBoxContainer" unique_id=1186250627]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_twpvi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nmf5u")
+theme_override_styles/hover = SubResource("StyleBoxTexture_twpvi")
 text = "Credits"
 
 [node name="Quit" type="Button" parent="OptionsWindow/Panel/VBoxContainer" unique_id=1279286473]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_twpvi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nmf5u")
+theme_override_styles/hover = SubResource("StyleBoxTexture_twpvi")
 text = "Quit"
 
 [node name="CreditsWindow" type="Window" parent="." unique_id=1739298641]
 gui_embed_subwindows = true
 oversampling_override = 1.0
-position = Vector2i(445, 223)
-size = Vector2i(168, 212)
+position = Vector2i(438, 223)
+size = Vector2i(190, 212)
 min_size = Vector2i(54, 2)
-max_size = Vector2i(590, 390)
+max_size = Vector2i(632, 452)
 theme_override_constants/title_height = 22
 theme_override_constants/resize_margin = 12
 theme_override_icons/close = ExtResource("2_twpvi")
@@ -135,6 +181,7 @@ offset_right = -1.8399963
 offset_bottom = -16.119995
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Ghost Tower
 
 Created by Snowman64
@@ -146,6 +193,9 @@ HolySlav564 - Game Jam
 
 CRT Filter by art-oria
 https://github.com/art-oria/Flowerwall-CRT-shader-for-Godot
+
+Windows 95 Font licensed under the SIL OpenFont license.
+https://www.dafont.com/w95fa.font
 
 Save and Load Settings by DashNothing
 https://www.youtube.com/watch?v=tfqJjDw0o7Y
