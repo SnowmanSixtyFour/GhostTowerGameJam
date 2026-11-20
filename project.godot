@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Ghost Tower"
+run/main_scene="uid://dqt7ityud2vmb"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,6 +20,8 @@ config/icon="res://icon.svg"
 SettingsFile="*uid://cpi6wobyd72uj"
 PreventTab="*uid://pqk73tbmjblm"
 CrtFilter="*uid://bey1w5586mwlw"
+TransitionScreen="*uid://cuyteyrc7u8a2"
+SceneHandler="*uid://4k6mbne1xbl1"
 
 [display]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bey1w5586mwlw"]
 
 [ext_resource type="Shader" uid="uid://b67v0i44vlv7m" path="res://Assets/Shaders/Filters/crt_filter.gdshader" id="1_j1fcs"]
-[ext_resource type="Script" uid="uid://c8qlds1kj5x16" path="res://Scripts/Rendering/crt_filter.gd" id="1_r6xn0"]
+[ext_resource type="Script" uid="uid://c8qlds1kj5x16" path="res://Scripts/Global/crt_filter.gd" id="1_r6xn0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r6xn0"]
 shader = ExtResource("1_j1fcs")

@@ -13,6 +13,7 @@ func _process(delta: float):
 
 func show_credits():
 	credits_window.show()
+	credits_window.grab_focus()
 
 func hide_credits():
 	credits_window.hide()

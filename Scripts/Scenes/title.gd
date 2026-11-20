@@ -6,5 +6,9 @@ func _ready():
 func _process(delta: float):
 	pass
 
+func _input(event: InputEvent):
+	if Input.is_action_pressed("ui_accept"):
+		go_to_main_menu()
+
 func go_to_main_menu():
-	pass
+	SceneHandler.go_to_scene(SceneHandler.main_menu)
