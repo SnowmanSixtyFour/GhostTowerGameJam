@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bey1w5586mwlw"]
+
+[ext_resource type="Shader" uid="uid://b67v0i44vlv7m" path="res://Assets/Shaders/Filters/crt_filter.gdshader" id="1_j1fcs"]
+[ext_resource type="Script" uid="uid://c8qlds1kj5x16" path="res://Scripts/Rendering/crt_filter.gd" id="1_r6xn0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r6xn0"]
+shader = ExtResource("1_j1fcs")
+shader_parameter/enable_slotmask = true
+shader_parameter/enable_gridmask = true
+shader_parameter/mask_strength = 0.15000000223518
+shader_parameter/pixel_size = 3.0
+shader_parameter/enable_grain = false
+shader_parameter/colored_grain = true
+shader_parameter/grain_strength = 0.25
+shader_parameter/enable_curving = true
+shader_parameter/curve_power = 1.0499999988824
+shader_parameter/enable_scanlines = true
+shader_parameter/scanlines_interval = 3.0
+shader_parameter/scanlines_opacity = 0.15000000223518
+shader_parameter/scanlines_thickness = 1.0
+shader_parameter/enable_smearing = true
+shader_parameter/smearing_strength = 0.2
+shader_parameter/enable_wiggle = true
+shader_parameter/wiggle = 0.04
+
+[sub_resource type="QuadMesh" id="QuadMesh_snxsd"]
+size = Vector2(400, 300)
+center_offset = Vector3(200, 150, 0)
+
+[node name="CRTFilter" type="Node" unique_id=1459055647]
+script = ExtResource("1_r6xn0")
+
+[node name="CRTFilterLayer" type="CanvasLayer" parent="." unique_id=29127578]
+
+[node name="CRTFilterMesh" type="MeshInstance2D" parent="CRTFilterLayer" unique_id=678008204]
+material = SubResource("ShaderMaterial_r6xn0")
+scale = Vector2(1.5999999, 1.5999999)
+mesh = SubResource("QuadMesh_snxsd")

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dqt7ityud2vmb"]
+
+[ext_resource type="Script" uid="uid://di0f0f25x2grq" path="res://Scripts/Scenes/title.gd" id="1_cfg0g"]
+
+[node name="Title" type="Control" unique_id=12488516]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cfg0g")

@@ -14,11 +14,18 @@ config/name="Ghost Tower"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SettingsFile="*uid://cpi6wobyd72uj"
+PreventTab="*uid://pqk73tbmjblm"
+CrtFilter="*uid://bey1w5586mwlw"
+
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=480
 window/stretch/mode="canvas_items"
+window/per_pixel_transparency/allowed=true
 
 [physics]
 
