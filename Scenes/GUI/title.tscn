@@ -27,25 +27,29 @@ shader_parameter/scrolling_up = true
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cu8et"]
 texture = ExtResource("9_wis5d")
-texture_margin_left = 1.0
-texture_margin_top = 20.0
+texture_margin_left = 24.0
+texture_margin_top = 21.0
 texture_margin_right = 60.0
 texture_margin_bottom = 5.0
 expand_margin_left = 2.0
-expand_margin_top = 27.0
+expand_margin_top = 28.0
 expand_margin_right = 3.0
 expand_margin_bottom = 5.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_836cq"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_770n2"]
 texture = ExtResource("10_ya1nw")
-texture_margin_left = 1.0
-texture_margin_top = 20.0
+texture_margin_left = 24.0
+texture_margin_top = 21.0
 texture_margin_right = 60.0
 texture_margin_bottom = 5.0
 expand_margin_left = 2.0
-expand_margin_top = 27.0
+expand_margin_top = 28.0
 expand_margin_right = 3.0
 expand_margin_bottom = 5.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecnj7"]
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
@@ -210,16 +214,16 @@ text = "2026 Snowman64"
 [node name="OptionsWindow" type="Window" parent="." unique_id=1251386069]
 gui_embed_subwindows = true
 oversampling_override = 1.0
-position = Vector2i(216, 270)
-size = Vector2i(207, 132)
-min_size = Vector2i(54, 124)
+position = Vector2i(175, 274)
+size = Vector2i(290, 132)
+min_size = Vector2i(74, 100)
 max_size = Vector2i(632, 452)
 theme_override_constants/title_height = 22
 theme_override_constants/resize_margin = 12
 theme_override_icons/close = ExtResource("7_770n2")
 theme_override_icons/close_pressed = ExtResource("8_t2e20")
 theme_override_styles/embedded_border = SubResource("StyleBoxTexture_cu8et")
-theme_override_styles/embedded_unfocused_border = SubResource("StyleBoxTexture_836cq")
+theme_override_styles/embedded_unfocused_border = SubResource("StyleBoxTexture_770n2")
 script = ExtResource("11_mcycx")
 
 [node name="Panel" type="Panel" parent="OptionsWindow" unique_id=854067553]
@@ -291,16 +295,16 @@ text = "Quit"
 [node name="CreditsWindow" type="Window" parent="." unique_id=1429849517]
 gui_embed_subwindows = true
 oversampling_override = 1.0
-position = Vector2i(438, 223)
-size = Vector2i(190, 212)
-min_size = Vector2i(54, 2)
+position = Vector2i(172, 215)
+size = Vector2i(295, 212)
+min_size = Vector2i(74, 2)
 max_size = Vector2i(632, 452)
 theme_override_constants/title_height = 22
 theme_override_constants/resize_margin = 12
 theme_override_icons/close = ExtResource("7_770n2")
 theme_override_icons/close_pressed = ExtResource("8_t2e20")
 theme_override_styles/embedded_border = SubResource("StyleBoxTexture_cu8et")
-theme_override_styles/embedded_unfocused_border = SubResource("StyleBoxTexture_836cq")
+theme_override_styles/embedded_unfocused_border = SubResource("StyleBoxTexture_770n2")
 script = ExtResource("11_mcycx")
 
 [node name="Panel" type="Panel" parent="CreditsWindow" unique_id=2048233495]
@@ -375,6 +379,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="close_requested" from="OptionsWindow" to="." method="close_game"]
+[connection signal="pressed" from="OptionsWindow/Panel/VBoxContainer/Start" to="." method="start_game"]
 [connection signal="pressed" from="OptionsWindow/Panel/VBoxContainer/Credits" to="." method="show_credits"]
 [connection signal="pressed" from="OptionsWindow/Panel/VBoxContainer/Quit" to="." method="close_game"]
 [connection signal="close_requested" from="CreditsWindow" to="." method="hide_credits"]

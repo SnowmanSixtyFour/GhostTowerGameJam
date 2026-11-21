@@ -5,17 +5,24 @@ extends Control
 
 @onready var press_start_label = $PressStartLabel
 
+var move_credits_opposite = true
+var screen_width = 640
+
 func _ready():
 	# Set title
 	options_window.hide()
 	credits_window.hide()
 
 func _process(delta: float):
-	pass
+	if move_credits_opposite:
+		credits_window.position.x = screen_width - options_window.position.x - credits_window.size.x
 
 func _input(event: InputEvent):
 	if Input.is_action_pressed("ui_accept"):
 		show_options()
+
+func start_game():
+	AudioManager.play_sfx(Audio.click)
 
 func show_options():
 	# Show window
@@ -26,6 +33,8 @@ func show_options():
 	press_start_label.stop_flashing()
 
 func show_credits():
+	move_credits_opposite = false
+	
 	AudioManager.play_sfx(Audio.click)
 	
 	credits_window.show()

@@ -5,7 +5,7 @@ extends Node
 var video_settings
 
 func _ready() -> void:
-	layer.layer = 1026
+	layer.layer = 1030
 	
 	video_settings = SettingsFile.load_video_settings()
 	
