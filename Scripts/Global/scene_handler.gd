@@ -1,7 +1,6 @@
 extends Node
 
 var title = preload("res://Scenes/GUI/title.tscn")
-var main_menu = preload("res://Scenes/GUI/main_menu.tscn")
 
 var previous_scene = title
 

@@ -9,6 +9,9 @@ func _ready() -> void:
 	if (!FileAccess.file_exists(OPTIONS_FILE_PATH)):
 		config.set_value("video", "crt_filter", true)
 		
+		config.set_value("audio", "music", 1.0)
+		config.set_value("audio", "sfx", 1.0)
+		
 		config.save(OPTIONS_FILE_PATH)
 	else:
 		config.load(OPTIONS_FILE_PATH)

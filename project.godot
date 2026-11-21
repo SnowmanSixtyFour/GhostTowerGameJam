@@ -13,7 +13,15 @@ config_version=5
 config/name="Ghost Tower"
 run/main_scene="uid://dqt7ityud2vmb"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+boot_splash/stretch_mode=0
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://b37pwxrpycqqb"
 
 [autoload]
 
@@ -22,6 +30,8 @@ PreventTab="*uid://pqk73tbmjblm"
 CrtFilter="*uid://bey1w5586mwlw"
 TransitionScreen="*uid://cuyteyrc7u8a2"
 SceneHandler="*uid://4k6mbne1xbl1"
+AudioManager="*uid://d28ej0ttobqli"
+Audio="*uid://cpy3b8lepaug2"
 
 [display]
 
