@@ -6,7 +6,10 @@ extends Control
 
 @onready var press_start_label = $PressStartLabel
 
+var previous_options_position: Vector2i
+
 var move_credits_opposite = true
+var move_credits = false
 var screen_width = 640
 
 var last_focused_window
@@ -17,6 +20,8 @@ func _ready():
 	# Hide buttons
 	options_window.hide()
 	credits_window.hide()
+	
+	previous_options_position = options_window.position
 	
 	quit_game_window.hide()
 	quit_game_window_position = quit_game_window.position
@@ -30,9 +35,13 @@ func _ready():
 	credits_window.focus_entered.connect(_on_window_focused.bind(credits_window))
 
 func _process(delta: float):
+	if options_window.position != previous_options_position:
+		move_credits = true
+	
 	# Move credits window before seen
-	if move_credits_opposite:
-		credits_window.position.x = screen_width - options_window.position.x - credits_window.size.x
+	if move_credits:
+		if move_credits_opposite:
+			credits_window.position.x = screen_width - options_window.position.x - credits_window.size.x
 	
 	# Keep focus on quit game window
 	if warning:

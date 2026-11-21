@@ -295,7 +295,7 @@ text = "Quit"
 [node name="CreditsWindow" type="Window" parent="." unique_id=1429849517]
 gui_embed_subwindows = true
 oversampling_override = 1.0
-position = Vector2i(172, 215)
+position = Vector2i(322, 215)
 size = Vector2i(295, 212)
 min_size = Vector2i(74, 2)
 max_size = Vector2i(632, 452)
