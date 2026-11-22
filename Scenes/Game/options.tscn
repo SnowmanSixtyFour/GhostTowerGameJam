@@ -28,8 +28,8 @@ texture_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_girxe"]
 texture = ExtResource("7_fvgl4")
-texture_margin_top = 4.0
-texture_margin_bottom = 4.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
@@ -38,16 +38,16 @@ texture = ExtResource("7_fvgl4")
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="GUI" type="CanvasLayer" unique_id=1934499821]
-layer = 1029
+[node name="Options" type="CanvasLayer" unique_id=1934499821]
 script = ExtResource("1_7e3iu")
 
-[node name="BG" type="TextureRect" parent="." unique_id=1746200436]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="BG" type="TextureRect" parent="." unique_id=972021365]
+offset_right = 640.0
+offset_bottom = 480.0
+mouse_filter = 0
 texture = ExtResource("2_80463")
 
-[node name="BackButton" type="Button" parent="." unique_id=1963164329]
+[node name="BackButton" type="Button" parent="." unique_id=610672036]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -62,14 +62,14 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_kohd3")
 theme_override_styles/hover = SubResource("StyleBoxTexture_t3dxg")
 text = "Back"
 
-[node name="MusicSlider" type="HSlider" parent="." unique_id=1166764972]
+[node name="MusicSlider" type="HSlider" parent="." unique_id=1246983731]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 146.0
-offset_top = 34.815002
-offset_right = 320.0
-offset_bottom = 58.815063
+offset_top = 23.815002
+offset_right = 326.0
+offset_bottom = 47.815063
 grow_vertical = 2
 theme_override_icons/grabber = ExtResource("5_34lxj")
 theme_override_icons/grabber_highlight = ExtResource("5_34lxj")
@@ -81,7 +81,7 @@ max_value = 1.0
 step = 0.05
 value = 1.0
 
-[node name="Label" type="Label" parent="MusicSlider" unique_id=1588991843]
+[node name="Label" type="Label" parent="MusicSlider" unique_id=109580104]
 layout_mode = 0
 offset_top = -10.0
 offset_right = 67.0
@@ -89,14 +89,14 @@ offset_bottom = 6.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Music"
 
-[node name="SFXSlider" type="HSlider" parent="." unique_id=751747837]
+[node name="SFXSlider" type="HSlider" parent="." unique_id=977027506]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 146.0
-offset_top = 76.0
-offset_right = 320.0
-offset_bottom = 100.00003
+offset_top = 65.0
+offset_right = 326.0
+offset_bottom = 89.0
 grow_vertical = 2
 theme_override_icons/grabber = ExtResource("5_34lxj")
 theme_override_icons/grabber_highlight = ExtResource("5_34lxj")
@@ -108,7 +108,7 @@ max_value = 1.0
 step = 0.05
 value = 1.0
 
-[node name="Label" type="Label" parent="SFXSlider" unique_id=657024139]
+[node name="Label" type="Label" parent="SFXSlider" unique_id=188094195]
 layout_mode = 0
 offset_top = -10.0
 offset_right = 67.0
@@ -116,16 +116,16 @@ offset_bottom = 6.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "SFX"
 
-[node name="FullscreenButton" type="CheckButton" parent="." unique_id=1882366545]
+[node name="FullscreenButton" type="CheckButton" parent="." unique_id=2053267969]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -294.0
-offset_top = -161.0
+offset_top = -175.0
 offset_right = -144.0
-offset_bottom = -130.0
+offset_bottom = -144.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -145,16 +145,16 @@ theme_override_icons/unchecked_disabled_mirrored = ExtResource("11_o73ol")
 button_pressed = true
 text = "Fullscreen"
 
-[node name="CRTFilterButton" type="CheckButton" parent="." unique_id=1848149020]
+[node name="CRTFilterButton" type="CheckButton" parent="." unique_id=555672580]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -294.0
-offset_top = -120.0
+offset_top = -138.0
 offset_right = -144.0
-offset_bottom = -89.0
+offset_bottom = -107.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)

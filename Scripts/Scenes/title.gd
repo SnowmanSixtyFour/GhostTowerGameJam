@@ -19,6 +19,8 @@ var quit_game_window_position
 var leaving_title = false
 var pause_menu = false
 
+var credits_previously_visible = false
+
 func _ready():
 	# Hide buttons
 	options_window.hide()
@@ -59,10 +61,8 @@ func _process(delta: float):
 		quit_game_window.hide()
 		quit_game_window.gui_disable_input = true
 		
-		options_window.grab_focus()
 		options_window.gui_disable_input = true
 		credits_window.gui_disable_input = true
-	
 	if not leaving_title and not pause_menu:
 		options_window.gui_disable_input = false
 		credits_window.gui_disable_input = false
@@ -70,22 +70,25 @@ func _process(delta: float):
 	
 	# While options are open
 	if SceneHandler.is_options_visible:
-		# Prevent any sort of movement
-		options_window.borderless = true
-		credits_window.borderless = true
-		quit_game_window.borderless = true
+		# Hide windows
+		options_window.hide()
+		credits_window.hide()
+		quit_game_window.hide()
 	else:
-		# Allow movement
-		options_window.borderless = false
-		credits_window.borderless = false
-		quit_game_window.borderless = false
+		# Show windows
+		if credits_previously_visible: credits_window.show()
+		options_window.show()
 	
 	# Exit options
-	if not SceneHandler.opened_options and not SceneHandler.is_options_visible:
+	if not SceneHandler.is_options_visible and not SceneHandler.opened_options:
 		if pause_menu:
 			if not leaving_title:
 				options_window.gui_disable_input = false
+				options_window.unfocusable = false
+				
 				credits_window.gui_disable_input = false
+				credits_window.unfocusable = false
+				
 				quit_game_window.gui_disable_input = false
 			
 			leaving_title = false
@@ -120,6 +123,8 @@ func go_to_options() -> void:
 	pause_menu = true
 
 func show_credits():
+	credits_previously_visible = true
+	
 	move_credits_opposite = false
 	
 	AudioManager.play_sfx(Audio.click)
@@ -128,6 +133,8 @@ func show_credits():
 	credits_window.grab_focus()
 
 func hide_credits():
+	credits_previously_visible = false
+	
 	if not leaving_title or pause_menu: AudioManager.play_sfx(Audio.click)
 	
 	credits_window.hide()

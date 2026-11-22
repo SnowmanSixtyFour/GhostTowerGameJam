@@ -15,6 +15,8 @@ var Music
 var SFX
 
 func _ready():
+	layer = 1028
+	
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
 	video_settings = SettingsFile.load_video_settings()

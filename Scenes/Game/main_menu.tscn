@@ -212,10 +212,10 @@ theme_override_font_sizes/font_size = 24
 text = "2026 Snowman64"
 
 [node name="OptionsWindow" type="Window" parent="." unique_id=1251386069]
-gui_embed_subwindows = true
 oversampling_override = 1.0
 position = Vector2i(175, 262)
 size = Vector2i(290, 148)
+force_native = true
 min_size = Vector2i(74, 148)
 max_size = Vector2i(632, 452)
 theme_override_constants/title_height = 22
@@ -307,10 +307,10 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_t3dxg")
 text = "Quit"
 
 [node name="CreditsWindow" type="Window" parent="." unique_id=1429849517]
-gui_embed_subwindows = true
 oversampling_override = 1.0
 position = Vector2i(322, 215)
 size = Vector2i(295, 212)
+force_native = true
 min_size = Vector2i(74, 2)
 max_size = Vector2i(632, 452)
 theme_override_constants/title_height = 22
@@ -393,11 +393,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="QuitGameWindow" type="Window" parent="." unique_id=131773849]
-gui_embed_subwindows = true
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(126, 68)
 unresizable = true
+force_native = true
 min_size = Vector2i(126, 68)
 max_size = Vector2i(126, 100)
 theme_override_constants/title_height = 22
