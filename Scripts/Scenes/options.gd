@@ -37,6 +37,7 @@ func _input(event: InputEvent):
 		_back_button_pressed()
 
 func _back_button_pressed():
+	AudioManager.play_sfx(Audio.click)
 	SceneHandler.hide_options()
 
 func _audio_changed(value: float, bus):
