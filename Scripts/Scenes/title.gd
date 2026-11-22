@@ -19,6 +19,7 @@ var quit_game_window_position
 var leaving_title = false
 var pause_menu = false
 
+var intro_done = false
 var credits_previously_visible = false
 
 func _ready():
@@ -77,7 +78,7 @@ func _process(delta: float):
 	else:
 		# Show windows
 		if credits_previously_visible: credits_window.show()
-		options_window.show()
+		if intro_done: options_window.show()
 	
 	# Exit options
 	if not SceneHandler.is_options_visible and not SceneHandler.opened_options:
@@ -110,6 +111,8 @@ func start_game():
 	SceneHandler.go_to_scene(SceneHandler.ghost_tower)
 
 func show_options():
+	intro_done = true
+	
 	# Show window
 	options_window.show()
 	options_window.grab_focus()
