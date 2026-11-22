@@ -7,6 +7,7 @@ func _ready() -> void:
 	## Create options.ini
 	
 	if (!FileAccess.file_exists(OPTIONS_FILE_PATH)):
+		config.set_value("video", "fullscreen", true)
 		config.set_value("video", "crt_filter", true)
 		
 		config.set_value("audio", "music", 1.0)
@@ -15,6 +16,15 @@ func _ready() -> void:
 		config.save(OPTIONS_FILE_PATH)
 	else:
 		config.load(OPTIONS_FILE_PATH)
+	
+	## Load options.ini
+	
+	var video_settings = load_video_settings()
+	
+	if video_settings.fullscreen == true:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func save_video_setting(key: String, value):
 	config.set_value("video", key, value)

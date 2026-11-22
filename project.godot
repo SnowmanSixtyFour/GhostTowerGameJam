@@ -26,11 +26,11 @@ buses/default_bus_layout="uid://b37pwxrpycqqb"
 [autoload]
 
 SettingsFile="*uid://cpi6wobyd72uj"
+AudioManager="*uid://d28ej0ttobqli"
 PreventTab="*uid://pqk73tbmjblm"
 CrtFilter="*uid://bey1w5586mwlw"
 TransitionScreen="*uid://cuyteyrc7u8a2"
 SceneHandler="*uid://4k6mbne1xbl1"
-AudioManager="*uid://d28ej0ttobqli"
 Audio="*uid://cpy3b8lepaug2"
 
 [display]

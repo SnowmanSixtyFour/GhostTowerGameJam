@@ -6,7 +6,7 @@ signal on_transition_finished
 @onready var animation_player = $AnimationPlayer
 
 func _ready() -> void:
-	layer = 1029
+	layer = 1030
 	color_rect.visible = false
 	animation_player.animation_finished.connect(_on_animation_finished)
 

@@ -181,7 +181,6 @@ texture = ExtResource("5_mkanb")
 expand_mode = 1
 
 [node name="PressStartLabel" type="Label" parent="." unique_id=1866177044]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -215,9 +214,9 @@ text = "2026 Snowman64"
 [node name="OptionsWindow" type="Window" parent="." unique_id=1251386069]
 gui_embed_subwindows = true
 oversampling_override = 1.0
-position = Vector2i(175, 274)
-size = Vector2i(290, 132)
-min_size = Vector2i(74, 100)
+position = Vector2i(175, 262)
+size = Vector2i(290, 148)
+min_size = Vector2i(74, 148)
 max_size = Vector2i(632, 452)
 theme_override_constants/title_height = 22
 theme_override_constants/resize_margin = 12
@@ -264,6 +263,20 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_t3dxg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_kohd3")
 theme_override_styles/hover = SubResource("StyleBoxTexture_t3dxg")
 text = "Start"
+
+[node name="Options" type="Button" parent="OptionsWindow/Panel/VBoxContainer" unique_id=2057304150]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_t3dxg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kohd3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_t3dxg")
+text = "Options"
 
 [node name="Credits" type="Button" parent="OptionsWindow/Panel/VBoxContainer" unique_id=189803782]
 layout_mode = 2
@@ -454,8 +467,9 @@ text = "No"
 
 [connection signal="close_requested" from="OptionsWindow" to="." method="close_game_via_button"]
 [connection signal="pressed" from="OptionsWindow/Panel/VBoxContainer/Start" to="." method="start_game"]
+[connection signal="pressed" from="OptionsWindow/Panel/VBoxContainer/Options" to="." method="go_to_options"]
 [connection signal="pressed" from="OptionsWindow/Panel/VBoxContainer/Credits" to="." method="show_credits"]
-[connection signal="pressed" from="OptionsWindow/Panel/VBoxContainer/Quit" to="." method="close_game"]
+[connection signal="pressed" from="OptionsWindow/Panel/VBoxContainer/Quit" to="." method="close_game_via_button"]
 [connection signal="close_requested" from="CreditsWindow" to="." method="hide_credits"]
 [connection signal="close_requested" from="QuitGameWindow" to="." method="exit_warn"]
 [connection signal="pressed" from="QuitGameWindow/Panel/Yes" to="." method="close_game"]

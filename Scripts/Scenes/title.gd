@@ -17,6 +17,7 @@ var warning = false
 var quit_game_window_position
 
 var leaving_title = false
+var pause_menu = false
 
 func _ready():
 	# Hide buttons
@@ -52,7 +53,7 @@ func _process(delta: float):
 	# Prevent quit game window from moving
 	quit_game_window.position = quit_game_window_position
 	
-	if leaving_title:
+	if leaving_title or pause_menu:
 		warning = false
 		
 		quit_game_window.hide()
@@ -61,13 +62,43 @@ func _process(delta: float):
 		options_window.grab_focus()
 		options_window.gui_disable_input = true
 		credits_window.gui_disable_input = true
+	
+	if not leaving_title and not pause_menu:
+		options_window.gui_disable_input = false
+		credits_window.gui_disable_input = false
+		quit_game_window.gui_disable_input = false
+	
+	# While options are open
+	if SceneHandler.is_options_visible:
+		# Prevent any sort of movement
+		options_window.borderless = true
+		credits_window.borderless = true
+		quit_game_window.borderless = true
+	else:
+		# Allow movement
+		options_window.borderless = false
+		credits_window.borderless = false
+		quit_game_window.borderless = false
+	
+	# Exit options
+	if not SceneHandler.opened_options and not SceneHandler.is_options_visible:
+		if pause_menu:
+			if not leaving_title:
+				options_window.gui_disable_input = false
+				credits_window.gui_disable_input = false
+				quit_game_window.gui_disable_input = false
+			
+			leaving_title = false
+			warning = false
+			pause_menu = false
 
 func _input(event: InputEvent):
-	if Input.is_action_just_pressed("start"):
-		show_options()
-	
-	if Input.is_action_just_pressed("exit"):
-		warn_about_closing()
+	if not pause_menu:
+		if Input.is_action_just_pressed("start"):
+			show_options()
+		
+		if Input.is_action_just_pressed("exit"):
+			warn_about_closing()
 
 func start_game():
 	if not leaving_title: AudioManager.play_sfx(Audio.click)
@@ -83,6 +114,11 @@ func show_options():
 	# Hide other objects
 	press_start_label.stop_flashing()
 
+func go_to_options() -> void:
+	if not leaving_title or pause_menu: AudioManager.play_sfx(Audio.click)
+	SceneHandler.show_options()
+	pause_menu = true
+
 func show_credits():
 	move_credits_opposite = false
 	
@@ -92,7 +128,7 @@ func show_credits():
 	credits_window.grab_focus()
 
 func hide_credits():
-	AudioManager.play_sfx(Audio.click)
+	if not leaving_title or pause_menu: AudioManager.play_sfx(Audio.click)
 	
 	credits_window.hide()
 	
@@ -100,7 +136,7 @@ func hide_credits():
 	options_window.grab_focus()
 
 func close_game_via_button():
-	if not leaving_title: AudioManager.play_sfx(Audio.click)
+	if not leaving_title or pause_menu: AudioManager.play_sfx(Audio.click)
 	warn_about_closing()
 
 func _on_window_focused(window: Window):
@@ -116,7 +152,7 @@ func warn_about_closing():
 	warning = true
 
 func exit_warn():
-	AudioManager.play_sfx(Audio.click)
+	if not leaving_title or pause_menu: AudioManager.play_sfx(Audio.click)
 	
 	options_window.gui_disable_input = false
 	credits_window.gui_disable_input = false
