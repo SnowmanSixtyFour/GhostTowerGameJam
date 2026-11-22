@@ -195,7 +195,7 @@ offset_bottom = 71.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 38
-text = "Press START to Begin"
+text = "Press START"
 horizontal_alignment = 1
 script = ExtResource("6_3ym0m")
 

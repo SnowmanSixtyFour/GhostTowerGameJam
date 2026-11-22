@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dubtus5y3erkv"]
+
+[ext_resource type="Script" uid="uid://dp0rpttoh163l" path="res://Scripts/Scenes/warning.gd" id="1_01pos"]
+[ext_resource type="Texture2D" uid="uid://pjpo73xgpqd0" path="res://Assets/Images/Backgrounds/warning.png" id="2_vmdr7"]
+
+[node name="Warning" type="Control" unique_id=457248420]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_01pos")
+
+[node name="BG" type="TextureRect" parent="." unique_id=1451639973]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vmdr7")
+
+[node name="Warning" type="Label" parent="." unique_id=1886951138]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.48100004
+anchor_right = 0.5
+anchor_bottom = 0.48100004
+offset_left = -68.5
+offset_top = -81.88002
+offset_right = 70.5
+offset_bottom = -43.879944
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 38
+text = "WARNING"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="Label" parent="Warning" unique_id=594431170]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -210.5
+offset_top = 58.0
+offset_right = 210.5
+offset_bottom = 195.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 25
+text = "This game contains flashing lights,
+an unsettling atmosphere, and scenes of intense
+violence that may be disturbing to some.
+
+Press START when you are ready to proceed."
+horizontal_alignment = 1
+
+[node name="Transition" type="ColorRect" parent="." unique_id=1056102377]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

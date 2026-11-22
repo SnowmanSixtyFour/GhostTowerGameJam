@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GHOST TOWER"
-run/main_scene="uid://dqt7ityud2vmb"
+run/main_scene="uid://dubtus5y3erkv"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
