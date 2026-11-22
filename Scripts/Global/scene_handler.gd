@@ -1,8 +1,9 @@
 extends Node
 
-var title = preload("res://Scenes/GUI/title.tscn")
+var main_menu = preload("res://Scenes/Game/main_menu.tscn")
+var ghost_tower = preload("res://Scenes/Game/ghost_tower.tscn")
 
-var previous_scene = title
+var previous_scene = main_menu
 
 func go_to_scene(scene_name):
 	set_previous_scene()

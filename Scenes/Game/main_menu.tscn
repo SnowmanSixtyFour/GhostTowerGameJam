@@ -1,24 +1,24 @@
 [gd_scene format=3 uid="uid://dqt7ityud2vmb"]
 
-[ext_resource type="Script" uid="uid://di0f0f25x2grq" path="res://Scripts/Scenes/title.gd" id="1_cfg0g"]
-[ext_resource type="Texture2D" uid="uid://cgxkv1g4gh2cp" path="res://Assets/Images/Backgrounds/tower_crop.png" id="2_5mlt8"]
-[ext_resource type="Shader" uid="uid://brj4okkob27bu" path="res://Assets/Shaders/Images/scrolling.gdshader" id="2_flbej"]
-[ext_resource type="Texture2D" uid="uid://ewgllbpjnh8d" path="res://Assets/Images/Backgrounds/fog_dark.png" id="3_flbej"]
-[ext_resource type="Texture2D" uid="uid://b6m6gudh8omnl" path="res://Assets/Images/Game/ghost_tower_logo.png" id="4_qahy3"]
-[ext_resource type="Script" uid="uid://7uait5j4q8mn" path="res://Scripts/Objects/flashing_label.gd" id="6_uakdt"]
-[ext_resource type="Texture2D" uid="uid://bg2m42fy6dbk0" path="res://Assets/Images/GUI/close_button.png" id="7_770n2"]
-[ext_resource type="Texture2D" uid="uid://w0rp4mgg22ir" path="res://Assets/Images/GUI/close_button_pressed.png" id="8_t2e20"]
-[ext_resource type="Texture2D" uid="uid://cpw7oeww5pvjn" path="res://Assets/Images/GUI/window.png" id="9_wis5d"]
-[ext_resource type="Texture2D" uid="uid://clwi3e2w0jx7f" path="res://Assets/Images/GUI/window_unfocused.png" id="10_ya1nw"]
-[ext_resource type="Script" uid="uid://ckrn8quppytc3" path="res://Scripts/Objects/window.gd" id="11_mcycx"]
-[ext_resource type="Texture2D" uid="uid://bw6gpspv6pt15" path="res://Assets/Images/GUI/button.png" id="12_gfy0m"]
-[ext_resource type="Texture2D" uid="uid://dn0tv7lysy7nh" path="res://Assets/Images/GUI/button_pressed.png" id="13_lh0ca"]
-[ext_resource type="Texture2D" uid="uid://j6umkedyfc4h" path="res://Assets/Images/GUI/scroll_bar.png" id="14_ex8pu"]
-[ext_resource type="Texture2D" uid="uid://bnibdbipvl6wj" path="res://Assets/Images/GUI/scroll_bar_pressed.png" id="15_qvu31"]
-[ext_resource type="Texture2D" uid="uid://bxx0bxxpx22k3" path="res://Assets/Images/GUI/scroll_bar_transparency.png" id="16_656dg"]
+[ext_resource type="Script" uid="uid://di0f0f25x2grq" path="res://Scripts/Scenes/title.gd" id="1_0ajfu"]
+[ext_resource type="Texture2D" uid="uid://cgxkv1g4gh2cp" path="res://Assets/Images/Backgrounds/tower_crop.png" id="2_3endj"]
+[ext_resource type="Shader" uid="uid://brj4okkob27bu" path="res://Assets/Shaders/Images/scrolling.gdshader" id="3_oqben"]
+[ext_resource type="Texture2D" uid="uid://ewgllbpjnh8d" path="res://Assets/Images/Backgrounds/fog_dark.png" id="4_1g5hs"]
+[ext_resource type="Texture2D" uid="uid://b6m6gudh8omnl" path="res://Assets/Images/Game/ghost_tower_logo.png" id="5_mkanb"]
+[ext_resource type="Script" uid="uid://7uait5j4q8mn" path="res://Scripts/Objects/flashing_label.gd" id="6_3ym0m"]
+[ext_resource type="Texture2D" uid="uid://bg2m42fy6dbk0" path="res://Assets/Images/GUI/close_button.png" id="7_5527u"]
+[ext_resource type="Texture2D" uid="uid://w0rp4mgg22ir" path="res://Assets/Images/GUI/close_button_pressed.png" id="8_nql3d"]
+[ext_resource type="Texture2D" uid="uid://cpw7oeww5pvjn" path="res://Assets/Images/GUI/window.png" id="9_4wxyr"]
+[ext_resource type="Texture2D" uid="uid://clwi3e2w0jx7f" path="res://Assets/Images/GUI/window_unfocused.png" id="10_332v4"]
+[ext_resource type="Script" uid="uid://ckrn8quppytc3" path="res://Scripts/Objects/window.gd" id="11_24667"]
+[ext_resource type="Texture2D" uid="uid://bw6gpspv6pt15" path="res://Assets/Images/GUI/button.png" id="12_0pp0e"]
+[ext_resource type="Texture2D" uid="uid://dn0tv7lysy7nh" path="res://Assets/Images/GUI/button_pressed.png" id="13_0mnpp"]
+[ext_resource type="Texture2D" uid="uid://j6umkedyfc4h" path="res://Assets/Images/GUI/scroll_bar.png" id="14_t6t64"]
+[ext_resource type="Texture2D" uid="uid://bnibdbipvl6wj" path="res://Assets/Images/GUI/scroll_bar_pressed.png" id="15_trmqv"]
+[ext_resource type="Texture2D" uid="uid://bxx0bxxpx22k3" path="res://Assets/Images/GUI/scroll_bar_transparency.png" id="16_6iwi4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5mlt8"]
-shader = ExtResource("2_flbej")
+shader = ExtResource("3_oqben")
 shader_parameter/speed = 0.1
 shader_parameter/scrolling_horizontally = true
 shader_parameter/scrolling_vertically = false
@@ -26,7 +26,7 @@ shader_parameter/scrolling_left = true
 shader_parameter/scrolling_up = true
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cu8et"]
-texture = ExtResource("9_wis5d")
+texture = ExtResource("9_4wxyr")
 texture_margin_left = 24.0
 texture_margin_top = 21.0
 texture_margin_right = 60.0
@@ -39,7 +39,7 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_770n2"]
-texture = ExtResource("10_ya1nw")
+texture = ExtResource("10_332v4")
 texture_margin_left = 24.0
 texture_margin_top = 21.0
 texture_margin_right = 60.0
@@ -55,14 +55,14 @@ axis_stretch_vertical = 1
 bg_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t3dxg"]
-texture = ExtResource("12_gfy0m")
+texture = ExtResource("12_0pp0e")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kohd3"]
-texture = ExtResource("13_lh0ca")
+texture = ExtResource("13_0mnpp")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
@@ -71,7 +71,7 @@ texture_margin_bottom = 4.0
 [sub_resource type="ImageTexture" id="ImageTexture_rsjie"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ygtv"]
-texture = ExtResource("14_ex8pu")
+texture = ExtResource("14_t6t64")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
@@ -82,7 +82,7 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8wjyh"]
-texture = ExtResource("15_qvu31")
+texture = ExtResource("15_trmqv")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
@@ -93,7 +93,7 @@ axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s14jb"]
-texture = ExtResource("16_656dg")
+texture = ExtResource("16_6iwi4")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
@@ -142,7 +142,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_cfg0g")
+script = ExtResource("1_0ajfu")
 
 [node name="BG" type="TextureRect" parent="." unique_id=1469891893]
 layout_mode = 1
@@ -151,7 +151,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_5mlt8")
+texture = ExtResource("2_3endj")
 
 [node name="Clouds" type="TextureRect" parent="." unique_id=996619418]
 material = SubResource("ShaderMaterial_5mlt8")
@@ -161,7 +161,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_flbej")
+texture = ExtResource("4_1g5hs")
 stretch_mode = 1
 
 [node name="Logo" type="TextureRect" parent="." unique_id=367405407]
@@ -177,10 +177,11 @@ offset_right = 222.0
 offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_qahy3")
+texture = ExtResource("5_mkanb")
 expand_mode = 1
 
 [node name="PressStartLabel" type="Label" parent="." unique_id=1866177044]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -196,7 +197,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 38
 text = "Press START to Begin"
 horizontal_alignment = 1
-script = ExtResource("6_uakdt")
+script = ExtResource("6_3ym0m")
 
 [node name="CreditsLabel" type="Label" parent="." unique_id=1786842294]
 layout_mode = 1
@@ -204,11 +205,11 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 14.0
-offset_top = -47.0
-offset_right = 252.0
-offset_bottom = -9.0
+offset_top = -32.0
+offset_right = 165.0
+offset_bottom = -8.0
 grow_vertical = 0
-theme_override_font_sizes/font_size = 38
+theme_override_font_sizes/font_size = 24
 text = "2026 Snowman64"
 
 [node name="OptionsWindow" type="Window" parent="." unique_id=1251386069]
@@ -220,11 +221,11 @@ min_size = Vector2i(74, 100)
 max_size = Vector2i(632, 452)
 theme_override_constants/title_height = 22
 theme_override_constants/resize_margin = 12
-theme_override_icons/close = ExtResource("7_770n2")
-theme_override_icons/close_pressed = ExtResource("8_t2e20")
+theme_override_icons/close = ExtResource("7_5527u")
+theme_override_icons/close_pressed = ExtResource("8_nql3d")
 theme_override_styles/embedded_border = SubResource("StyleBoxTexture_cu8et")
 theme_override_styles/embedded_unfocused_border = SubResource("StyleBoxTexture_770n2")
-script = ExtResource("11_mcycx")
+script = ExtResource("11_24667")
 
 [node name="Panel" type="Panel" parent="OptionsWindow" unique_id=854067553]
 anchors_preset = -1
@@ -301,11 +302,11 @@ min_size = Vector2i(74, 2)
 max_size = Vector2i(632, 452)
 theme_override_constants/title_height = 22
 theme_override_constants/resize_margin = 12
-theme_override_icons/close = ExtResource("7_770n2")
-theme_override_icons/close_pressed = ExtResource("8_t2e20")
+theme_override_icons/close = ExtResource("7_5527u")
+theme_override_icons/close_pressed = ExtResource("8_nql3d")
 theme_override_styles/embedded_border = SubResource("StyleBoxTexture_cu8et")
 theme_override_styles/embedded_unfocused_border = SubResource("StyleBoxTexture_770n2")
-script = ExtResource("11_mcycx")
+script = ExtResource("11_24667")
 
 [node name="Panel" type="Panel" parent="CreditsWindow" unique_id=2048233495]
 anchors_preset = -1
@@ -331,7 +332,7 @@ grow_vertical = 2
 theme = SubResource("Theme_nw7y3")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
-text = "Ghost Tower
+text = "GHOST TOWER
 
 Created by Snowman64
 
@@ -388,11 +389,11 @@ min_size = Vector2i(126, 68)
 max_size = Vector2i(126, 100)
 theme_override_constants/title_height = 22
 theme_override_constants/resize_margin = 12
-theme_override_icons/close = ExtResource("7_770n2")
-theme_override_icons/close_pressed = ExtResource("8_t2e20")
+theme_override_icons/close = ExtResource("7_5527u")
+theme_override_icons/close_pressed = ExtResource("8_nql3d")
 theme_override_styles/embedded_border = SubResource("StyleBoxTexture_cu8et")
 theme_override_styles/embedded_unfocused_border = SubResource("StyleBoxTexture_770n2")
-script = ExtResource("11_mcycx")
+script = ExtResource("11_24667")
 
 [node name="Panel" type="Panel" parent="QuitGameWindow" unique_id=822323279]
 anchors_preset = -1

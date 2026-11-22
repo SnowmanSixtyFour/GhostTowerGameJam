@@ -16,6 +16,8 @@ var last_focused_window
 var warning = false
 var quit_game_window_position
 
+var leaving_title = false
+
 func _ready():
 	# Hide buttons
 	options_window.hide()
@@ -49,6 +51,16 @@ func _process(delta: float):
 	
 	# Prevent quit game window from moving
 	quit_game_window.position = quit_game_window_position
+	
+	if leaving_title:
+		warning = false
+		
+		quit_game_window.hide()
+		quit_game_window.gui_disable_input = true
+		
+		options_window.grab_focus()
+		options_window.gui_disable_input = true
+		credits_window.gui_disable_input = true
 
 func _input(event: InputEvent):
 	if Input.is_action_just_pressed("start"):
@@ -58,7 +70,10 @@ func _input(event: InputEvent):
 		warn_about_closing()
 
 func start_game():
-	AudioManager.play_sfx(Audio.click)
+	if not leaving_title: AudioManager.play_sfx(Audio.click)
+	
+	leaving_title = true
+	SceneHandler.go_to_scene(SceneHandler.ghost_tower)
 
 func show_options():
 	# Show window
@@ -85,7 +100,7 @@ func hide_credits():
 	options_window.grab_focus()
 
 func close_game_via_button():
-	AudioManager.play_sfx(Audio.click)
+	if not leaving_title: AudioManager.play_sfx(Audio.click)
 	warn_about_closing()
 
 func _on_window_focused(window: Window):
