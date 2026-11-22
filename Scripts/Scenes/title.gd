@@ -1,10 +1,13 @@
 extends Control
 
 @onready var options_window = $OptionsWindow
+@onready var game_jam_window = $GameJamWindow
 @onready var credits_window = $CreditsWindow
 @onready var quit_game_window = $QuitGameWindow
 
 @onready var press_start_label = $PressStartLabel
+
+var game_jam_website = "https://itch.io/jam/game-jam-95"
 
 var previous_options_position: Vector2i
 
@@ -27,6 +30,9 @@ func _ready():
 	options_window.hide()
 	credits_window.hide()
 	
+	# Focus on game jam logo
+	game_jam_window.grab_focus()
+	
 	previous_options_position = options_window.position
 	
 	quit_game_window.hide()
@@ -34,10 +40,12 @@ func _ready():
 	
 	# Connect button input
 	options_window.window_input.connect(_input)
+	game_jam_window.window_input.connect(_input)
 	credits_window.window_input.connect(_input)
 	quit_game_window.window_input.connect(_input)
 	
 	options_window.focus_entered.connect(_on_window_focused.bind(options_window))
+	game_jam_window.focus_entered.connect(_on_window_focused.bind(game_jam_window))
 	credits_window.focus_entered.connect(_on_window_focused.bind(credits_window))
 
 func _process(delta: float):
@@ -64,9 +72,11 @@ func _process(delta: float):
 		
 		options_window.gui_disable_input = true
 		credits_window.gui_disable_input = true
+		game_jam_window.gui_disable_input = true
 	if not leaving_title and not pause_menu:
 		options_window.gui_disable_input = false
 		credits_window.gui_disable_input = false
+		game_jam_window.gui_disable_input = false
 		quit_game_window.gui_disable_input = false
 	
 	# While options are open
@@ -74,11 +84,14 @@ func _process(delta: float):
 		# Hide windows
 		options_window.hide()
 		credits_window.hide()
+		game_jam_window.hide()
 		quit_game_window.hide()
 	else:
 		# Show windows
+		game_jam_window.show()
 		if credits_previously_visible: credits_window.show()
-		if intro_done: options_window.show()
+		if intro_done:
+			options_window.show()
 	
 	# Exit options
 	if not SceneHandler.is_options_visible and not SceneHandler.opened_options:
@@ -155,6 +168,7 @@ func _on_window_focused(window: Window):
 func warn_about_closing():
 	options_window.gui_disable_input = true
 	credits_window.gui_disable_input = true
+	game_jam_window.gui_disable_input = false
 	
 	quit_game_window.show()
 	quit_game_window.grab_focus()
@@ -166,6 +180,7 @@ func exit_warn():
 	
 	options_window.gui_disable_input = false
 	credits_window.gui_disable_input = false
+	game_jam_window.gui_disable_input = false
 	
 	quit_game_window.hide()
 	last_focused_window.grab_focus()
@@ -174,3 +189,8 @@ func exit_warn():
 
 func close_game():
 	get_tree().quit()
+
+func game_jam_logo_clicked():
+	if not leaving_title or pause_menu:
+		AudioManager.play_sfx(Audio.click)
+		OS.shell_open(game_jam_website)

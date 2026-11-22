@@ -17,7 +17,7 @@ boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 boot_splash/stretch_mode=0
 boot_splash/use_filter=false
-config/icon="uid://nmq63yjpjvk4"
+config/icon="uid://san008hsvu5k"
 config/macos_native_icon="res://icon.icns"
 config/windows_native_icon="res://icon.ico"
 
