@@ -3,6 +3,7 @@ extends Node
 var main_menu = preload("res://Scenes/Game/main_menu.tscn")
 var ghost_tower = preload("res://Scenes/Game/ghost_tower.tscn")
 var options = preload("res://Scenes/Game/options.tscn")
+var slot_machine = preload("res://Scenes/Game/slot_machine.tscn")
 
 var previous_scene = main_menu
 

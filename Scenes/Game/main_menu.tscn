@@ -225,7 +225,7 @@ offset_right = 165.0
 offset_bottom = -8.0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 24
-text = "2026 Snowman64"
+text = "2026 Snowman64, 41popzic"
 
 [node name="OptionsWindow" type="Window" parent="." unique_id=1251386069]
 gui_embed_subwindows = true
@@ -364,6 +364,7 @@ bbcode_enabled = true
 text = "GHOST TOWER
 
 Created by Snowman64
+Music by 41popzic
 
 Made for Game Jam 95
 
@@ -375,7 +376,7 @@ HolySlav564 - Game Jam
 
 [hr]
 
-Assets used:
+Assets used under free licenses:
 
 CRT Filter by art-oria
 https://github.com/art-oria/Flowerwall-CRT-shader-for-Godot
@@ -397,10 +398,22 @@ https://www.youtube.com/watch?v=Shj_QVwrefY
 Audio Manager by WisconsiKnight
 https://www.youtube.com/watch?v=dTL6Cpk5hY4
 
-Images used under the CC0 license:
+Slot Machine by Mina Pecheux
+https://www.youtube.com/watch?v=7hFV7CCTXss
+
+Assets used under the CC0 license:
 
 tower_wall_fortress_castle.jpg
 https://free-images.com/display/tower_wall_fortress_castle.html
+
+slot_machine_one_armed.jpg
+https://free-images.com/display/slot_machine_one_armed.html
+
+casino_las_vegas_city.jpg
+https://free-images.com/display/casino_las_vegas_city.html
+
+cabinet handle.mp3 (sfarkas92)
+https://freesound.org/people/sfarkas92/sounds/444542/
 
 [hr]
 
@@ -410,7 +423,10 @@ Source code is free to view on GitHub.
 https://github.com/SnowmanSixtyFour/GhostTowerGameJam/
 
 Code licensed under the GNU General Public License v3.0.
-https://www.gnu.org/licenses/gpl-3.0.en.html"
+https://www.gnu.org/licenses/gpl-3.0.en.html
+
+All music used in-game was composed by 41popzic.
+https://soundcloud.com/41popzic"
 horizontal_alignment = 1
 vertical_alignment = 1
 

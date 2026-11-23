@@ -1,0 +1,192 @@
+[gd_scene format=3 uid="uid://owrv1lmomjrp"]
+
+[ext_resource type="Script" uid="uid://c288awf070210" path="res://Scripts/Scenes/slot_machine.gd" id="1_djbtm"]
+[ext_resource type="Shader" uid="uid://bymplcww3yocj" path="res://Assets/Shaders/Images/casino_slots.gdshader" id="1_wlxi0"]
+[ext_resource type="Texture2D" uid="uid://befso7n7tw6ng" path="res://Assets/Images/Backgrounds/casino.png" id="2_qoot5"]
+[ext_resource type="Texture2D" uid="uid://lhxdxbw2l3k7" path="res://Assets/Images/GUI/slots.png" id="2_vegjl"]
+[ext_resource type="Texture2D" uid="uid://bw6gpspv6pt15" path="res://Assets/Images/GUI/button.png" id="4_o0ubx"]
+[ext_resource type="Texture2D" uid="uid://dn0tv7lysy7nh" path="res://Assets/Images/GUI/button_pressed.png" id="5_47wp3"]
+[ext_resource type="Texture2D" uid="uid://cs28cli7r2fy6" path="res://Assets/Images/GUI/slot_machine.png" id="6_o0ubx"]
+[ext_resource type="Texture2D" uid="uid://b4uu4lwerir3k" path="res://Assets/Images/GUI/slot_machine_handle.png" id="6_qoot5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_12j5o"]
+shader = ExtResource("1_wlxi0")
+shader_parameter/tex = ExtResource("2_vegjl")
+shader_parameter/n_rows = 5.0
+shader_parameter/y_offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qoot5"]
+shader = ExtResource("1_wlxi0")
+shader_parameter/tex = ExtResource("2_vegjl")
+shader_parameter/n_rows = 5.0
+shader_parameter/y_offset = 0.4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_entrd"]
+shader = ExtResource("1_wlxi0")
+shader_parameter/tex = ExtResource("2_vegjl")
+shader_parameter/n_rows = 5.0
+shader_parameter/y_offset = 0.6
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6q5u"]
+texture = ExtResource("4_o0ubx")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_djbtm"]
+texture = ExtResource("5_47wp3")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o0ubx"]
+texture = ExtResource("5_47wp3")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_47wp3"]
+texture = ExtResource("4_o0ubx")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qoot5"]
+texture = ExtResource("5_47wp3")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[node name="SlotMachine" type="Control" unique_id=1429886989 node_paths=PackedStringArray("spinners")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_djbtm")
+spinners = [NodePath("Slot1"), NodePath("Slot2"), NodePath("Slot3")]
+
+[node name="BG" type="TextureRect" parent="." unique_id=1113062255]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qoot5")
+
+[node name="SlotBG" type="ColorRect" parent="." unique_id=394891005]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 227.0
+offset_right = 435.0
+offset_bottom = 293.0
+color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[node name="Slot1" type="ColorRect" parent="." unique_id=1743502056]
+material = SubResource("ShaderMaterial_12j5o")
+layout_mode = 0
+offset_left = 234.0
+offset_top = 237.0
+offset_right = 282.0
+offset_bottom = 285.0
+
+[node name="Slot2" type="ColorRect" parent="." unique_id=1607193703]
+material = SubResource("ShaderMaterial_qoot5")
+layout_mode = 0
+offset_left = 296.0
+offset_top = 237.0
+offset_right = 344.0
+offset_bottom = 285.0
+
+[node name="Slot3" type="ColorRect" parent="." unique_id=130132567]
+material = SubResource("ShaderMaterial_entrd")
+layout_mode = 0
+offset_left = 361.0
+offset_top = 237.0
+offset_right = 409.0
+offset_bottom = 285.0
+
+[node name="SlotMachine" type="TextureRect" parent="." unique_id=2015479229]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 168.0
+offset_top = 84.0
+offset_right = -179.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_o0ubx")
+
+[node name="Handle" type="TextureRect" parent="." unique_id=670261175]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 435.0
+offset_top = 156.0
+offset_right = -143.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_qoot5")
+stretch_mode = 2
+
+[node name="Attempts" type="Label" parent="." unique_id=1601754278]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 10.0
+offset_right = 599.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 26
+text = "Attempts:"
+
+[node name="SpinButton" type="Button" parent="." unique_id=1144811567]
+layout_mode = 0
+offset_left = 422.0
+offset_top = 290.0
+offset_right = 454.0
+offset_bottom = 314.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_m6q5u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_djbtm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m6q5u")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_o0ubx")
+text = "Spin
+"
+
+[node name="BackButton" type="Button" parent="." unique_id=135913815]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -48.0
+offset_right = 84.0
+offset_bottom = -16.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0.5019608)
+theme_override_styles/normal = SubResource("StyleBoxTexture_47wp3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qoot5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_47wp3")
+text = "Back"
+
+[connection signal="pressed" from="SpinButton" to="." method="spin_button"]
