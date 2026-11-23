@@ -23,6 +23,7 @@ This game was made with [Godot](https://godotengine.org/), and must be installed
 
 ## Credits
 - [Snowman64](https://bsky.app/profile/snowman64.com) - Creator, Programmer
+- [41popzic](https://soundcloud.com/41popzic) - Music
 
 <b>For extended credits, view the RichTextLabel in the credits window node in [main_menu.tscn](https://github.com/SnowmanSixtyFour/GhostTowerGameJam/blob/main/Scenes/Game/main_menu.tscn).</b>
 
