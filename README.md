@@ -16,7 +16,6 @@
 Use point-and-click GUI systems inspired by Windows 95 to navigate menus, manage your inventory, and make it out of the dreaded ghost tower in one piece.
 
 <img src="Repository/GhostTowerWindows.gif">
-<br>
 
 Oh, and there's a slot machine minigame!
 
