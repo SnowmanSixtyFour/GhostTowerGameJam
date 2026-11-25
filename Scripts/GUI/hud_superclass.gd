@@ -1,9 +1,12 @@
 extends CanvasLayer
 
 @onready var PauseMenuWindow = $Screen/PauseMenuWindow
+
 @onready var HotbarWindow = $Screen/HotbarWindow
+@onready var Score = $Screen/Score
 
 var prevent_pause = false
+var hud_hidden = false
 
 func _ready():
 	# Hide Windows
@@ -37,8 +40,13 @@ func close_hotbar_button():
 func toggle_hotbar(show: bool):
 	if show:
 		HotbarWindow.show()
+		Score.show()
 	else:
 		HotbarWindow.hide()
+		Score.hide()
+	
+	# Don't stay focused on HUD elements
+	if get_tree().paused: PauseMenuWindow.grab_focus()
 
 func toggle_pause():
 	var new_pause_state = !get_tree().paused
