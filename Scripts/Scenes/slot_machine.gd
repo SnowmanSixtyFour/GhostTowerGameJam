@@ -10,8 +10,6 @@ extends Control
 var handle = load("res://Assets/Images/GUI/slot_machine_handle.png")
 var handle_down = load("res://Assets/Images/GUI/slot_machine_handle_down.png")
 
-var slots_sound = "res://Assets/Audio/SFX/slots_handle.wav"
-
 # Spinning Slots
 @export var n_options: int = 5
 @export var spinners: Array[Control]
@@ -24,7 +22,7 @@ func _ready():
 	update_attempts()
 
 func _process(delta: float):
-	AudioManager.play_music("res://Assets/Audio/Music/UnsquaredGalvanizations.wav")
+	AudioManager.play_music(Music.slot_machine)
 
 func update_attempts():
 	AttemptsLabel.text = "Attempts: " + str(attempts)
@@ -40,7 +38,7 @@ func spin_button():
 func spin():
 	SpinButton.disabled = true
 	
-	AudioManager.play_sfx(slots_sound)
+	AudioManager.play_sfx(Sfx.slots_sound)
 	MachineHandle.texture = handle_down
 	
 	remove_from_attempts()

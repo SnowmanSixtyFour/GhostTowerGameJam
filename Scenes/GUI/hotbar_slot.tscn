@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cl4ke0ogygftm"]
+
+[ext_resource type="Texture2D" uid="uid://bwg2oaoqa3835" path="res://Assets/Images/GUI/hotbar_slot.png" id="1_6vxgn"]
+
+[node name="HotbarSlot" type="Control" unique_id=1128621390]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SlotImage" type="TextureRect" parent="." unique_id=1573430589]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+texture = ExtResource("1_6vxgn")

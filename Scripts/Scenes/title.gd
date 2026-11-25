@@ -118,7 +118,7 @@ func _input(event: InputEvent):
 			warn_about_closing()
 
 func start_game():
-	if not leaving_title: AudioManager.play_sfx(Audio.click)
+	if not leaving_title: AudioManager.play_sfx(Sfx.click)
 	
 	leaving_title = true
 	SceneHandler.go_to_scene(SceneHandler.ghost_tower)
@@ -134,7 +134,7 @@ func show_options():
 	press_start_label.stop_flashing()
 
 func go_to_options() -> void:
-	if not leaving_title or pause_menu: AudioManager.play_sfx(Audio.click)
+	if not leaving_title or pause_menu: AudioManager.play_sfx(Sfx.click)
 	SceneHandler.show_options()
 	pause_menu = true
 
@@ -143,7 +143,7 @@ func show_credits():
 	
 	move_credits_opposite = false
 	
-	AudioManager.play_sfx(Audio.click)
+	AudioManager.play_sfx(Sfx.click)
 	
 	credits_window.show()
 	credits_window.grab_focus()
@@ -151,7 +151,7 @@ func show_credits():
 func hide_credits():
 	credits_previously_visible = false
 	
-	if not leaving_title or pause_menu: AudioManager.play_sfx(Audio.click)
+	if not leaving_title or pause_menu: AudioManager.play_sfx(Sfx.click)
 	
 	credits_window.hide()
 	
@@ -159,7 +159,7 @@ func hide_credits():
 	options_window.grab_focus()
 
 func close_game_via_button():
-	if not leaving_title or pause_menu: AudioManager.play_sfx(Audio.click)
+	if not leaving_title or pause_menu: AudioManager.play_sfx(Sfx.click)
 	warn_about_closing()
 
 func _on_window_focused(window: Window):
@@ -176,14 +176,14 @@ func warn_about_closing():
 	warning = true
 
 func exit_warn():
-	if not leaving_title or pause_menu: AudioManager.play_sfx(Audio.click)
+	if not leaving_title or pause_menu: AudioManager.play_sfx(Sfx.click)
 	
 	options_window.gui_disable_input = false
 	credits_window.gui_disable_input = false
 	game_jam_window.gui_disable_input = false
 	
 	quit_game_window.hide()
-	last_focused_window.grab_focus()
+	if last_focused_window != null: last_focused_window.grab_focus()
 	
 	warning = false
 
@@ -192,5 +192,5 @@ func close_game():
 
 func game_jam_logo_clicked():
 	if not leaving_title or pause_menu:
-		AudioManager.play_sfx(Audio.click)
+		AudioManager.play_sfx(Sfx.click)
 		OS.shell_open(game_jam_website)

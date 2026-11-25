@@ -15,11 +15,21 @@
 
 Use point-and-click GUI systems inspired by Windows 95 to navigate menus, manage your inventory, and make it out of the dreaded ghost tower in one piece.
 
+<img align="center" src="Repository/GhostTowerWindows.gif">
+<br><br>
+
+Oh, and there's a slot machine minigame!
+
 ## Compiling
 ### Godot
 This game was made with [Godot](https://godotengine.org/), and must be installed in order to modify the game.
 
 [Godot v4.7.2](https://godotengine.org/download/archive/4.7.2-stable/) was used, versions below will be incompatible with the project files.
+
+## Downloads
+Download the initial game jam release of the game in [releases](https://github.com/SnowmanSixtyFour/GhostTowerGameJam/releases).
+
+Alternatively, download the game on [itch.io](https://snowman64.itch.io/ghost-tower) or [Game Jolt](https://gamejolt.com/games/ghost-tower/1121497).
 
 ## Credits
 - [Snowman64](https://bsky.app/profile/snowman64.com) - Creator, Programmer

@@ -33,11 +33,11 @@ func _ready():
 	CRTFilterButton.button_pressed = video_settings.crt_filter
 
 func _input(event: InputEvent):
-	if event.is_action_pressed("pause"):
+	if event.is_action_pressed("exit"):
 		_back_button_pressed()
 
 func _back_button_pressed():
-	AudioManager.play_sfx(Audio.click)
+	AudioManager.play_sfx(Sfx.click)
 	SceneHandler.hide_options()
 
 func _audio_changed(value: float, bus):
