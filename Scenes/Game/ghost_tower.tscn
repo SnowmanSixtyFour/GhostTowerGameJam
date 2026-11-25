@@ -137,7 +137,7 @@ process_mode = 3
 layout_mode = 2
 
 [node name="PauseMenuWindow" type="Window" parent="HUD/Screen" unique_id=835516120]
-process_mode = 2
+process_mode = 3
 gui_embed_subwindows = true
 oversampling_override = 1.0
 position = Vector2i(449, 205)

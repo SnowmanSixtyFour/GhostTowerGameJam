@@ -12,6 +12,9 @@ func _ready():
 	# Make sure HUD cannot override input
 	PauseMenuWindow.window_input.connect(_input)
 	HotbarWindow.window_input.connect(_input)
+	
+	# Focus
+	HotbarWindow.grab_focus()
 
 func _process(delta: float):
 	pass
